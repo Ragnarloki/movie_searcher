@@ -1,5 +1,21 @@
-.card{
+.car{
+    
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+}
+.card{
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    
+}
+
+.inputField{
+ margin-top: 10px;
+ margin-bottom: 20px;
+ margin-right: 10px;
+}
+h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }

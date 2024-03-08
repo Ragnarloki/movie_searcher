@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 function App() {
@@ -45,17 +46,21 @@ const submitHandler = e =>{
   return (
     <div>
       <form onSubmit={submitHandler}>
-      <input type="text" value={endPoint} onChange={onchangeHandler}/>
-      <button type='submit'>submit</button>
-      
-      {container.map((item,index)=>{
-        return (<div key={index}  className="card" style={{width: "18rem"} }>
+        <center><h1> SEARCH THE MOVIE YOU WANT</h1></center>
+        <center>  <input type="text" className='inputField'  value={endPoint} onChange={onchangeHandler}/>
+      <button type='submit' className='btn btn-primary'>submit</button>
+      </center>
+      <div className='car'>{container.map((item,index)=>{
+        return (<div key={index} className='card'  style={{width: "18rem"} }>
           <p>{item.l}</p>
           <img src={item.i.imageUrl} alt="" width={250} height={300} />
           <p>Actors name:{item.s}</p>
+          
           </div>
-        )
+       
+ )
       })}
+      </div>
 </form>
     </div>
   )
