@@ -14,12 +14,12 @@ function App() {
 
   const  fetchme = async ()=> { 
 
-  fetch(`https://imdb8.p.rapidapi.com/auto-complete?q=+${endPoint}`,{
+  fetch(`https://online-movie-database.p.rapidapi.com/auto-complete?q=+${endPoint}`,{
     method: await 'GET',
     headers: {
       'X-RapidAPI-Key': '79b226d5c5msh58936cc3837787ap1e2f40jsn18453c50cd1b',
-		  'X-RapidAPI-Host': 'imdb8.p.rapidapi.com'
-  }
+		  'X-RapidAPI-Host': 'online-movie-database.p.rapidapi.com'
+	}
 })
 
 .then ( response => {
@@ -28,7 +28,6 @@ function App() {
 
 .then(data =>{
   setContainer(data.d)
-  console.log(data)
 })
 
 .catch (error => {
