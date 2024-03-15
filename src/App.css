@@ -19,3 +19,9 @@
 h1{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+.skeleton{
+    display: flex;
+    justify-content: center;
+    width: 100px;
+}

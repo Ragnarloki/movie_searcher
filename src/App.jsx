@@ -66,18 +66,19 @@ const submitHandler = e =>{
     <div>
 
       <form onSubmit={submitHandler}>
-        <center><h1> {title || <Skeleton />}</h1></center>
+        <center><h1> {title || <Skeleton width={500}/>}</h1></center>
         <center>  
-          {isloader ? ( <Skeleton/>) :(
-          
+          {isloader ? ( <div className='car'><Skeleton className='skeleton' width={300} /> <Skeleton/> </div>) :(
+          <div>
           <input type="text" className='inputField'  value={endPoint} onChange={onchangeHandler} autoFocus/>
-          )}
-      <button type='submit' className='btn btn-primary'>submit</button>
+          <button type='submit' className='btn btn-primary'>submit</button>
+          </div>
+)}
       </center>
       
       <div className='car'>{container.map((item,index)=>{
         return (<>
-        {isloader ? ( <Skeleton style={{display:"flex"}}/>) :(
+        {isloader ? ( <Skeleton width={300} />) :(
            <div key={index} className='card'  style={{width: "18rem"} }>
           <p>{item.knownForTitleText}</p>
           <img src={item.avatarImageModel.url} alt="" width={250} height={300} />
